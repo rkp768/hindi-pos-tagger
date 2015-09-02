@@ -1,5 +1,5 @@
 # HINDI POS TAGGER
-A part of speech tagger for hindi language using bi-gram HMM
+A part of speech tagger for hindi language using bi-gram language model and HMM
 
 URL : http://taghindi.herokuapp.com/
 
