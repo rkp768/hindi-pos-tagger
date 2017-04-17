@@ -1,0 +1,9 @@
+Viterbi Algorithm
+*****************
+
+1. Tags are states.
+2. Words are observations.
+3. Transition Probability : Probability of state transfer, eg : probability that one word is noun and next word in verb
+4. Emission Probability : Probability of a particular observation in a particular state, eg: probability that one particular word in noun
+5. For a given sentence "My name is Ram.", we want to predict the most likely tag sequence.
+6. The formula for finding the most likely tag sequence is,

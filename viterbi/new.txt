@@ -1,0 +1,3 @@
+[u'NN', u'PSP', u'NN', u'PSP', u'JJ', u'NN', u'RP', u'QC', u'NN', u'PSP', u'NN', u'NN', u'VAUX']
+[u'JJ', u'NN', u'INTF', u'JJ', u'NN', u'VAUX', u'CC', u'PRP', u'NN', u'PSP', u'NN', u'RP', u'QC', u'NN', u'VM', u'VAUX']
+[u'NN', u'PSP', u'PSP', u'XC', u'NN', u'PSP', u'NN', u'PSP', u'NNP', u'PSP', u'NNP', u'NN', u'PSP', u'NN', u'PSP', u'NN', u'PSP', u'NN', u'NN', u'VM']
