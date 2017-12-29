@@ -1,1 +1,1 @@
-This folder contains the implementation of Viterbi, LSTM, SVM, DTree and Perceptron algorithms for the task of hindi pos tagging.
+This folder contains the implementation of Viterbi, SVM, DTree and Perceptron(for DTree and Perceptron SVC() method from sklearn library need to be changed to appropriate method) algorithms for the task of hindi pos tagging.
