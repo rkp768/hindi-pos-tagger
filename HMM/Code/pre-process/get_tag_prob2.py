@@ -6,7 +6,7 @@ import codecs
 from collections import defaultdict
 
 # trainfile
-trainfile = codecs.open('train.txt',mode='r',encoding='utf-8')
+trainfile = codecs.open('data/new_train.txt',mode='r',encoding='utf-8')
 
 # count of tag sequences
 cnt = defaultdict(lambda : 1)
@@ -32,7 +32,7 @@ for i in cnt:
 	else:
 		prob[i] = cnt[i]/tot2
 print ttootoot
-probfile = codecs.open('tag_prob2.txt',mode='w',encoding='utf-8')
+probfile = codecs.open('data/tag_prob2.txt',mode='w',encoding='utf-8')
 for i in prob:
 	probfile.write(i+'\t'+str(prob[i])+'\n')
 trainfile.close()

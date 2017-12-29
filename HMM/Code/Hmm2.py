@@ -3,11 +3,11 @@ import codecs
 from collections import defaultdict
 from unicode_hindi import vowels,digits
 # testfile
-testfile = codecs.open('test.txt',mode='r',encoding='utf-8')
+testfile = codecs.open('pre-process/data/new_test.txt',mode='r',encoding='utf-8')
 
 # all tags
 alltags = []
-trainfile = codecs.open('train.txt',mode='r',encoding='utf-8')
+trainfile = codecs.open('pre-process/data/new_train.txt',mode='r',encoding='utf-8')
 for sentence in trainfile.readlines():
 	tokens = sentence.split()
 	for token in tokens:
@@ -15,11 +15,11 @@ for sentence in trainfile.readlines():
 alltags = list(set(alltags))
 
 # word prob file 
-wordprobfile = codecs.open('word_prob.txt',mode='r',encoding='utf-8')
+wordprobfile = codecs.open('pre-process/data/word_prob.txt',mode='r',encoding='utf-8')
 wordprob = {}
 for term in wordprobfile.readlines():
 	wordprob[term.split('\t')[0]] = float(term.split('\t')[1])
-tagprobfile = codecs.open('tag_prob2.txt',mode='r',encoding='utf-8')
+tagprobfile = codecs.open('pre-process/data/tag_prob2.txt',mode='r',encoding='utf-8')
 tagprob = {}
 for term in tagprobfile.readlines():
 	tagprob[term.split('\t')[0]] = float(term.split('\t')[1])

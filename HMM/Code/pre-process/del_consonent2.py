@@ -9,8 +9,8 @@ from unicode_hindi import vowels
 
 
 # train file
-trainfile = codecs.open("train.txt",mode='r',encoding='utf-8')
-rootfile = codecs.open("roofile.txt",mode='w',encoding='utf-8')
+trainfile = codecs.open("data/train.txt",mode='r',encoding='utf-8')
+rootfile = codecs.open("data/roofile.txt",mode='w',encoding='utf-8')
 dic = {}
 for sentence in trainfile:
 	tokens = sentence.split()

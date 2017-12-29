@@ -20,7 +20,7 @@ all_possible_suff = defaultdict(lambda : [])
 
 
 # train file
-trainfile = codecs.open("train.txt",mode='r',encoding='utf-8')
+trainfile = codecs.open("data/train.txt",mode='r',encoding='utf-8')
 for sentence in trainfile:
 	tokens = sentence.split()
 	for token in tokens:
@@ -47,15 +47,15 @@ for term in count:
 print "highest = ",max(prob.values())
 # lowest probability
 print "lowest = ",min(prob.values())
-probfile = codecs.open('suffix_prob.txt',mode='w',encoding='utf-8')
+probfile = codecs.open('data/suffix_prob.txt',mode='w',encoding='utf-8')
 for term in prob:
 	probfile.write(term+'\t'+str(prob[term])+'\n')
 
 # all possible file
-allfileword = codecs.open('all_possible_word.txt',mode='w',encoding='utf-8')
+allfileword = codecs.open('data/all_possible_word.txt',mode='w',encoding='utf-8')
 for term in all_possible_word:
 	allfileword.write(term+'\t'+'.'.join(list(set(all_possible_word[term])))+'\n')
-allfilesuff = codecs.open('all_possible_suff.txt',mode='w',encoding='utf-8')
+allfilesuff = codecs.open('data/all_possible_suff.txt',mode='w',encoding='utf-8')
 for term in all_possible_suff:
 	allfilesuff.write(term+'\t'+'.'.join(list(set(all_possible_suff[term])))+'\n')
 

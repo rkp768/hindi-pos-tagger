@@ -7,12 +7,12 @@ from sklearn.metrics import precision_recall_fscore_support
 from sklearn.metrics import accuracy_score
 
 # testfile
-testfile = codecs.open('new_test.txt',mode='r',encoding='utf-8')
+testfile = codecs.open('data/new_test.txt',mode='r',encoding='utf-8')
 
 
 # all tags
 alltags = []
-trainfile = codecs.open('new_train.txt',mode='r',encoding='utf-8')
+trainfile = codecs.open('data/new_train.txt',mode='r',encoding='utf-8')
 for sentence in trainfile.readlines():
 	tokens = sentence.split()
 	for token in tokens:
@@ -22,17 +22,17 @@ print alltags
 print len(alltags)
 
 # word prob file 
-wordprobfile = codecs.open('word_prob.txt',mode='r',encoding='utf-8')
+wordprobfile = codecs.open('data/word_prob.txt',mode='r',encoding='utf-8')
 wordprob = {}
 for term in wordprobfile.readlines():
 	wordprob[term.split('\t')[0]] = float(term.split('\t')[1])
 
-tagprobfile = codecs.open('tag_prob.txt',mode='r',encoding='utf-8')
+tagprobfile = codecs.open('data/tag_prob.txt',mode='r',encoding='utf-8')
 tagprob = {}
 for term in tagprobfile.readlines():
 	tagprob[term.split('\t')[0]] = float(term.split('\t')[1])
 
-tagprobfile = codecs.open('tag_prob_rev.txt',mode='r',encoding='utf-8')
+tagprobfile = codecs.open('data/tag_prob_rev.txt',mode='r',encoding='utf-8')
 tagprob_rev = {}
 for term in tagprobfile.readlines():
 	tagprob_rev[term.split('\t')[0]] = float(term.split('\t')[1])
