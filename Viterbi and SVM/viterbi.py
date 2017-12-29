@@ -44,7 +44,7 @@ def viterbi(sentence,Prb_dict,all_tags,D,Trns_P):
 	return [all_tags[i] for i in res[::-1]] 
 
 def tag():
-	__fTrain = codecs.open("train.txt", mode="r", encoding="utf-8")
+	__fTrain = codecs.open("new_train.txt", mode="r", encoding="utf-8")
 	__fTest  = codecs.open("tagfile.txt", mode="r", encoding="utf-8")
 	
 	Dict 	 = defaultdict(int)
@@ -89,7 +89,6 @@ def tag():
 	sorted_D = sorted(D.items(), key=operator.itemgetter(1))
 	__fTrain.close()
 
-	__fTrain = codecs.open("train.txt", mode="r", encoding="utf-8")
 	for line in __fTest.readlines():
 		try:
 			tokens = line.split()
@@ -105,8 +104,8 @@ def tag():
 			continue
 
 def test():
-	__fTrain = codecs.open("train.txt", mode="r", encoding="utf-8")
-	__fTest  = codecs.open("test.txt", mode="r", encoding="utf-8")
+	__fTrain = codecs.open("new_train.txt", mode="r", encoding="utf-8")
+	__fTest  = codecs.open("new_test.txt", mode="r", encoding="utf-8")
 
 	Dict 	 = defaultdict(int)
 	Psb_tags = defaultdict(set)
@@ -149,8 +148,7 @@ def test():
 		i += 1
 	sorted_D = sorted(D.items(), key=operator.itemgetter(1))
 	__fTrain.close()
-
-	__fTrain = codecs.open("train.txt", mode="r", encoding="utf-8")
+	
 	ACC = 0
 	toks = 0
 	TP = 0
