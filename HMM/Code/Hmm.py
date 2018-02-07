@@ -8,10 +8,12 @@ from unicode_hindi import vowels,digits
 testfile = codecs.open('pre-process/data/new_test.txt',mode='r',encoding='utf-8')
 
 rootfile = codecs.open('pre-process/data/roofile.txt',mode='r',encoding='utf-8')
+
+tagfile = codecs.open('tagfile.txt',mode='r',encoding='utf-8')
+
 root = {}
 for line in rootfile.readlines():
 	root[line.split('\t')[0]] = line.split('\t')[1]
-
 
 # all tags
 alltags = []
@@ -115,3 +117,36 @@ for i in dict_actual:
 		fm = 2*pr*re/(pr+re)
 		fmeasure[i] = fm
 	print i,fmeasure[i]
+
+# added recently
+# print("Tag for sentences in tagfile")
+# for sentence in tagfile.readlines():
+# 	prev = '$'	
+# 	taglist = []
+# 	for word in sentence.split():
+# 		ans = -1*float('inf')
+# 		for digit in digits:
+# 			if digit in word:
+# 				predicted_tag = u'QC'
+# 				prev = u'QC'
+# 		else:
+# 			if word[0] in [',','.','|','\'','\"','(',')',':',';','?','-','!','+','*','%','@','#','&','_','=']:
+# 				predicted_tag = u'SYM'
+# 				prev = u'SYM'
+# 			else:
+# 				word = word.strip('(').strip(')').strip('\'').strip('\"').strip('-').strip('[').strip(']').strip(':').strip(';').strip(',').strip('?').strip('-').strip('!').strip('@').strip('#').strip('&').strip('_').strip('=')
+# 				for tag in alltags:
+# 					try:
+# 						tp = tagprob[tag+'|'+prev]
+# 					except:
+# 						tp = 1e-8
+# 					try:
+# 						wp = wordprob[word+'|'+tag]
+# 					except:
+# 						wp = 1e-8
+# 					if tp*wp>ans:
+# 						ans = tp*wp
+# 						predicted_tag = tag
+# 				prev = predicted_tag
+# 		taglist.append(predicted_tag)
+# 	print(taglist)
